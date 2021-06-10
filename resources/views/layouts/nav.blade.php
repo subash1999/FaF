@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <img src="{{ asset('favicon/favicon.ico') }}" alt="FaF" height="40px">

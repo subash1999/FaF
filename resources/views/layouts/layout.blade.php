@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>@yield('page-title',config('app.name','Smart School'))</title>
+    <title>@yield('page-title',config('app.name','Fix and Fine'))</title>
 
     <meta charset="utf-8">
     <meta name="viewport"

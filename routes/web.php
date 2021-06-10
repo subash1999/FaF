@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//from this tutorial we got idea about routing
+//https://www.youtube.com/watch?v=kEa1SfqzMJo&list=PLWCLxMult9xdD3zH8lDbGwlyaCzOR_74F&index=1&ab_channel=ProgrammingwithVishalProgrammingwithVishal
+//https://www.youtube.com/watch?v=QV4hod3j5CQ&list=PL8p2I9GklV47EWeJZlC-_dgj7kdBWYd56&index=13&ab_channel=CodeStepByStepCodeStepByStep
 
 Route::get('/', function () {
     return view('welcome2');
@@ -23,6 +26,7 @@ Route::group(['namespace' => 'Customer', 'middleware' => ['auth:sanctum', 'custo
         return view('customer.customer-dashboard');
     })->name('dashboard');
 });
+//admin routes
 Route::group(['namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['auth:sanctum', 'admin','verified'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/dashboard', [DashboardController::Class,'index'])->name('dashboard');
     Route::resource('product-categories',ProductCategoryController::Class);
@@ -33,6 +37,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['aut
     Route::resource('customers',CustomerController::Class)->only(['index','show']);
     Route::resource('admins',AdminController::Class)->except(['edit','update']);
 });
+//customer routes
 Route::group(['namespace' => 'App\Http\Controllers\Customer', 'middleware' => ['auth:sanctum', 'customer','verified'], 'prefix' => 'customer', 'as' => 'customer.'], function () {
     Route::resource('carts',CartController::Class);
     Route::resource('wishlist',WishlistController::Class);

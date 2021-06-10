@@ -9,6 +9,8 @@ class Cart extends Model
 {
     use HasFactory;
 
+//    update cart if product available is less than product quantity in cart
+// we learned about this from the tutorial https://www.youtube.com/watch?v=zGzBVBcEj84&list=PLe30vg_FG4OSdVn4zFpXNpBILtijJ2-x7&index=6&ab_channel=Bitfumes
      public function updateCartQuantity(){
         if (auth()) {
             if ($this->quantity > $this->Product->quantity_available) {

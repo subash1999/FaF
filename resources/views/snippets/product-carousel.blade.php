@@ -1,3 +1,4 @@
+{{-- from bootstrap https://getbootstrap.com/docs/5.0/components/carousel/--}}
 <div id="carouselProduct{{ $product->id }}" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         @foreach($product->ProductImages as $product_image)

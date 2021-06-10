@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Laravel\Jetstream\Membership as JetstreamMembership;
 
+//created by laravel by default
 class Membership extends JetstreamMembership
 {
     /**

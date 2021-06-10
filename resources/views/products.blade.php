@@ -1,3 +1,4 @@
+{{--shows the product--}}
 @extends('layouts.layout')
 @section('app-content')
     <h1 class="text-center text-truncate m-3">Products</h1>
@@ -45,6 +46,7 @@
         </div>
     </form>
     <hr>
+{{--    if else code, look time to figure out--}}
     @if (request()->filled('search') || request()->filled('product_category') || request()->filled('min') || request()->filled('max'))
         <h5><u>Search Results</u></h5>
         <h5>Products Found: {{ $products_count }}</h5>
@@ -66,6 +68,8 @@
     @endif
     <hr>
     {!! $products->appends(Request::all())->links() !!}
+{{--    dispaly product, html and bootstrap, bootstrap documentation used to display all the products--}}
+{{--    idea referenced from https://bbbootstrap.com/snippets/bootstrap-product-comparison-template-99013072--}}
     <div class="row">
         @foreach($products as $product)
             <div class="col-md m-3 p-2 border border-info" style="max-width: 230px; min-width: 190px;">

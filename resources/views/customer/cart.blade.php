@@ -1,3 +1,4 @@
+{{--paypal integration by referencing https://www.youtube.com/watch?v=zGzBVBcEj84&list=PLe30vg_FG4OSdVn4zFpXNpBILtijJ2-x7&index=6&ab_channel=Bitfumes--}}
 @extends('layouts.customer-dashboard-layout')
 @section('customer-content')
     <h2 class="text-center text-break m-3">Cart</h2>

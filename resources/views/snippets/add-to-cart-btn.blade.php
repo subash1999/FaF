@@ -1,6 +1,7 @@
+{{--add to cart button knowledge form laravel documentation and bootstrap--}}
 <form action="{{ route('customer.carts.store') }}" method="POST"
       @guest
-      onsubmit="alert('Login to add to product to cart'); return false;"
+      onsubmit="alert('Login to add product to cart'); return false;"
       @endguest
       @auth
       @if(Auth::user()->is_admin)

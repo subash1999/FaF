@@ -1,7 +1,9 @@
 @extends('layouts.layout')
 @section('app-content')
+{{--    we wrote it ourself--}}
     <h2 class="text-break mt-4 mb-5"><u> {{ $product->name }}</u></h2>
     <div class="w-50">
+{{--        including product carousel https://laravel.com/docs/8.x/blade--}}
         @include('snippets.product-carousel',['product'=>$product,'height_in_px'=>400])
     </div>
     <hr>
@@ -16,7 +18,9 @@
         <h5 class="text-break">Price: ${{ $product->price }}</h5>
     @endif
     <h5>Quantity Available : {{ $product->quantity_available }}</h5>
+{{--add to wishlist button--}}
     @include('snippets.add-to-wishlist-btn')
+{{--add to cart button--}}
     @include('snippets.add-to-cart-btn')
     <hr>
     <h5>Product Description</h5>

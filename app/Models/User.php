@@ -59,6 +59,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+//    attribute from laravel documentation
     public function getIsAdminAttribute(){
         if(strcasecmp($this->user_type,'admin')==0){
             return true;
@@ -66,6 +67,7 @@ class User extends Authenticatable
         return false;
     }
 
+//    laravel documentation
     public function getIsCustomerAttribute(){
         if(strcasecmp($this->user_type,'customer')==0){
             return true;

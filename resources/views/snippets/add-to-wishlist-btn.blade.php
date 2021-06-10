@@ -1,6 +1,7 @@
+{{--same code as  wishlist just chaged in some places and color of button and text of button--}}
 <form action="{{ route('customer.wishlist.store') }}" method="POST"
       @guest
-      onsubmit="alert('Login to add to product to wishlist'); return false;"
+      onsubmit="alert('Login to add product to wishlist'); return false;"
       @endguest
       @auth
       @if(Auth::user()->is_admin)

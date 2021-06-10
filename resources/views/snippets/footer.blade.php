@@ -1,3 +1,4 @@
+{{--footer code bootstarp https://getbootstrap.com/docs/5.0/examples/sticky-footer/--}}
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container ml-4">
         <div class="row">

@@ -1,5 +1,7 @@
+{{-- our creation--}}
 @extends('layouts.layout')
 @section('app-content')
+{{--    carousel from bootsrap https://getbootstrap.com/docs/5.0/components/carousel/--}}
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
